@@ -11,6 +11,31 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 		'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
+function getDayName(date) {
+	return date.toLocaleDateString("en-NZ", { weekday: "long" });
+}
+
+const popupContent = (name, hours) => {
+	const today = new Date();
+	return [
+		`<b>${name}</b>`,
+		...[
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Saturday",
+			"Sunday",
+		].map(
+			(day) =>
+				`<div class="${
+					getDayName(today) === day ? "highlight" : ""
+				}">${day} - ${hours[day]}</div>`
+		),
+	].join("");
+};
+
 const visitLibrary = async (libraryId) => {
 	const lib = libraries.find((l) => l.libraryId === libraryId);
 	lib.visited = !lib.visited;
@@ -19,10 +44,11 @@ const visitLibrary = async (libraryId) => {
 		method: "POST",
 		body: JSON.stringify(libraries),
 	});
-	console.log(libraries.filter((i) => i.visited));
 };
+
 libraries.forEach((lib) => {
-	let el = document.createElement("div");
+	let el = document.createElement("a");
+	el.id = lib.libraryId;
 	el.className = "libraryElement";
 	el.dataset.visited = lib.visited;
 	el.dataset.libraryId = lib.libraryId;
@@ -43,27 +69,31 @@ libraries.forEach((lib) => {
 
 	el.addEventListener("click", () => {
 		const p = L.popup()
-			.setContent(`${lib.name}`)
+			.setContent(popupContent(lib.name, lib.hours))
 			.setLatLng([lib.lat, lib.lon])
 			.openOn(map);
 		map.openPopup(p);
 	});
 	el.onclick = list.appendChild(el);
 });
+
 const drawMap = () => {
 	libraries.forEach((lib) => {
-		const popup = L.popup().setContent(`${lib.name}`);
+		const popup = L.popup().setContent(popupContent(lib.name, lib.hours));
 		const color = lib.visited ? "#08FF08" : "#ff0000";
+		const openSundays = lib.hours.Sunday !== "Closed" ? 1 : 0.1;
 		const circle = L.circle([lib.lat, lib.lon], {
 			color: color,
 			fillColor: color,
-			fillOpacity: "1",
+			fillOpacity: openSundays,
 			radius: 400,
 		}).addTo(map);
 		circle.on("click", () => {
 			document
 				.querySelector(`[data-library-id="${lib.libraryId}"]`)
 				.scrollIntoView({ behavior: "smooth" });
+
+			location.hash = "#" + lib.libraryId;
 		});
 		circle.bindPopup(popup);
 	});
