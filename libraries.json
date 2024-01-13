@@ -1,0 +1,992 @@
+[
+	{
+	  "libraryId": 1,
+	  "name": "Albany Village Library",
+	  "address": "Kell Drive, Albany",
+	  "hours": {
+		"Saturday": "9.30am - 4.30pm",
+		"Sunday": "9.30am - 4.30pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.725662099999994",
+	  "lon": "174.69448255852353",
+	  "osm_id": 538452707,
+	  "visited": true
+	},
+	{
+	  "libraryId": 2,
+	  "name": "Avondale Library",
+	  "address": "93 Rosebank Rd, Avondale",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.8942579",
+	  "lon": "174.6952637",
+	  "osm_id": 320850907,
+	  "visited": false
+	},
+	{
+	  "libraryId": 3,
+	  "name": "Birkenhead Library",
+	  "address": "Nell Fisher Reserve, Hinemoa St, Birkenhead",
+	  "hours": {
+		"Saturday": "10am - 4.30pm",
+		"Sunday": "10am - 4.30pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.81300875",
+	  "lon": "174.72660888409703",
+	  "osm_id": 266759657,
+	  "visited": false
+	},
+	{
+	  "libraryId": 4,
+	  "name": "Blockhouse Bay Library",
+	  "address": "578 Blockhouse Bay Rd, Blockhouse Bay",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.92422415",
+	  "lon": "174.70198339999706",
+	  "osm_id": 174551221,
+	  "visited": false
+	},
+	{
+	  "libraryId": 5,
+	  "name": "Botany Library",
+	  "address": "Level 1, Botany Town Centre, Sunset Terrace, East Tāmaki",
+	  "hours": {
+		"Saturday": "9.30am - 5.30pm",
+		"Sunday": "10am - 5.30pm",
+		"Monday": "9.30am - 5.30pm",
+		"Tuesday": "9.30am - 5.30pm",
+		"Wednesday": "9.30am - 5.30pm",
+		"Thursday": "9.30am - 8pm",
+		"Friday": "9.30am - 8pm"
+	  },
+	  "lat": "-36.9345406",
+	  "lon": "174.9132896",
+	  "osm_id": 10236459061,
+	  "visited": false
+	},
+	{
+	  "libraryId": 6,
+	  "name": "Central City Library",
+	  "address": "44-46 Lorne St, Auckland",
+	  "hours": {
+		"Saturday": "10am - 5pm",
+		"Sunday": "10am - 5pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 8pm",
+		"Wednesday": "9am - 8pm",
+		"Thursday": "9am - 8pm",
+		"Friday": "9am - 8pm"
+	  },
+	  "lat": "-36.85169875",
+	  "lon": "174.76541462612",
+	  "osm_id": 23906761,
+	  "visited": false
+	},
+	{
+	  "libraryId": 7,
+	  "name": "Devonport Library",
+	  "address": "2 Victoria Rd, Devonport",
+	  "hours": {
+		"Saturday": "9.30am - 5pm",
+		"Sunday": "9.30am - 5pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.83142635",
+	  "lon": "174.79768922622733",
+	  "osm_id": 339843067,
+	  "visited": false
+	},
+	{
+	  "libraryId": 8,
+	  "name": "East Coast Bays Library",
+	  "address": "8 Bute Rd, Browns Bay",
+	  "hours": {
+		"Saturday": "9.30am - 4.30pm",
+		"Sunday": "9.30am - 4.30pm",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.7149881",
+	  "lon": "174.74691000751062",
+	  "osm_id": 337148515,
+	  "visited": false
+	},
+	{
+	  "libraryId": 9,
+	  "name": "Epsom Library",
+	  "address": "195 Manukau Rd, Epsom",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9.30am - 6pm",
+		"Tuesday": "9.30am - 6pm",
+		"Wednesday": "9.30am - 6pm",
+		"Thursday": "9.30am - 6pm",
+		"Friday": "9.30am - 5.30pm"
+	  },
+	  "lat": "-36.8818604",
+	  "lon": "174.7753275",
+	  "osm_id": 1484417975,
+	  "visited": false
+	},
+	{
+	  "libraryId": 10,
+	  "name": "Glen Eden Library",
+	  "address": "12-32 Glendale Rd, Glen Eden",
+	  "hours": {
+		"Saturday": "9.30am - 4.30pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.9108169",
+	  "lon": "174.6502432420486",
+	  "osm_id": 140630487,
+	  "visited": false
+	},
+	{
+	  "libraryId": 11,
+	  "name": "Glen Innes Library",
+	  "address": "108 Line Rd, Glen Innes",
+	  "hours": {
+		"Saturday": "9am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.8792563",
+	  "lon": "174.85670759683893",
+	  "osm_id": 155749089,
+	  "visited": false
+	},
+	{
+	  "libraryId": 12,
+	  "name": "Glenfield Library",
+	  "address": "90 Bentley Ave, Glenfield",
+	  "hours": {
+		"Saturday": "10am - 4.30pm",
+		"Sunday": "10am - 4.30pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.7808043",
+	  "lon": "174.72273675191437",
+	  "osm_id": 329615292,
+	  "visited": false
+	},
+	{
+	  "libraryId": 13,
+	  "name": "Great Barrier Library",
+	  "address": "75 Hector Sanderson Rd, Claris, Great Barrier Island",
+	  "hours": {
+		"Saturday": "Closed",
+		"Sunday": "Closed",
+		"Monday": "8.30am - 4.30pm",
+		"Tuesday": "8.30am - 4.30pm",
+		"Wednesday": "8.30am - 4.30pm",
+		"Thursday": "8.30am - 4.30pm",
+		"Friday": "8.30am - 4.30pm"
+	  },
+	  "lat": "-36.243691999999996",
+	  "lon": "175.46748800274725",
+	  "osm_id": 338565435,
+	  "visited": false
+	},
+	{
+	  "libraryId": 14,
+	  "name": "Grey Lynn Library",
+	  "address": "474 Great North Rd, Grey Lynn",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.8673212",
+	  "lon": "174.7388822",
+	  "osm_id": 660043817,
+	  "visited": false
+	},
+	{
+	  "libraryId": 15,
+	  "name": "Helensville Library",
+	  "address": "49 Commercial Rd, Helensville",
+	  "hours": {
+		"Saturday": "9.30am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9.30am - 5pm",
+		"Tuesday": "9.30am - 5pm",
+		"Wednesday": "9.30am - 5pm",
+		"Thursday": "9.30am - 5pm",
+		"Friday": "9.30am - 5pm"
+	  },
+	  "lat": "-36.6763808",
+	  "lon": "174.4509838",
+	  "osm_id": 1956070027,
+	  "visited": false
+	},
+	{
+	  "libraryId": 16,
+	  "name": "Highland Park Library",
+	  "address": "16 Highland Park Drive, Highland Park",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.9000006",
+	  "lon": "174.9083597",
+	  "osm_id": 3736691327,
+	  "visited": false
+	},
+	{
+	  "libraryId": 17,
+	  "name": "Howick Library",
+	  "address": "25 Uxbridge Rd, Howick",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.8943316",
+	  "lon": "174.9334456",
+	  "osm_id": 3013702640,
+	  "visited": false
+	},
+	{
+	  "libraryId": 18,
+	  "name": "Kumeū Library",
+	  "address": "296 Main Rd, Huapai",
+	  "hours": {
+		"Saturday": "9am - 5pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 5pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.77220495",
+	  "lon": "174.54751334129958",
+	  "osm_id": 338891028,
+	  "visited": false
+	},
+	{
+	  "libraryId": 19,
+	  "name": "Leys Institute Library (Ponsonby) - Closed",
+	  "address": "20 St Marys Road, Saint Marys Bay",
+	  "hours": {
+		"Saturday": "Closed",
+		"Sunday": "Closed",
+		"Monday": "Closed",
+		"Tuesday": "Closed",
+		"Wednesday": "Closed",
+		"Thursday": "Closed",
+		"Friday": "Closed"
+	  },
+	  "lat": "",
+	  "lon": "",
+	  "osm_id": "",
+	  "visited": false
+	},
+	{
+	  "libraryId": 20,
+	  "name": "Mahurangi East Library",
+	  "address": "21 Hamatana Rd, Snells Beach",
+	  "hours": {
+		"Saturday": "9am - 1pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 5pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.4211395",
+	  "lon": "174.7227555",
+	  "osm_id": 3397509381,
+	  "visited": false
+	},
+	{
+	  "libraryId": 21,
+	  "name": "Māngere Bridge Library",
+	  "address": "5-7 Church Rd, Māngere Bridge",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "9am - 1pm",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.94207295",
+	  "lon": "174.7861672",
+	  "osm_id": 114372295,
+	  "visited": false
+	},
+	{
+	  "libraryId": 22,
+	  "name": "Māngere East Library",
+	  "address": "370 Massey Rd, Māngere East",
+	  "hours": {
+		"Saturday": "9am - 5pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9am - 7pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.9665778",
+	  "lon": "174.8257466",
+	  "osm_id": 978589799,
+	  "visited": false
+	},
+	{
+	  "libraryId": 23,
+	  "name": "Māngere Town Centre Library",
+	  "address": "121 Bader Drive, Māngere",
+	  "hours": {
+		"Saturday": "9.30am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.9697481",
+	  "lon": "174.7988684",
+	  "osm_id": 2542919946,
+	  "visited": false
+	},
+	{
+	  "libraryId": 24,
+	  "name": "Manukau Library",
+	  "address": "3 Osterley Way, Manukau",
+	  "hours": {
+		"Saturday": "10am - 5pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.9919307",
+	  "lon": "174.87969206427016",
+	  "osm_id": 114661396,
+	  "visited": false
+	},
+	{
+	  "libraryId": 25,
+	  "name": "Manurewa Library",
+	  "address": "7 Hill Rd, Manurewa",
+	  "hours": {
+		"Saturday": "9am - 5pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 7pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-37.0208429",
+	  "lon": "174.8973476",
+	  "osm_id": 467025275,
+	  "visited": false
+	},
+	{
+	  "libraryId": 27,
+	  "name": "Mt Albert Library",
+	  "address": "84 St Lukes Rd, Mt Albert",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.88383975",
+	  "lon": "174.73505924429014",
+	  "osm_id": 62004195,
+	  "visited": false
+	},
+	{
+	  "libraryId": 28,
+	  "name": "Mt Roskill Library",
+	  "address": "546 Mt Albert Rd, Mt Roskill",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.9083368",
+	  "lon": "174.7566825",
+	  "osm_id": 1827167988,
+	  "visited": false
+	},
+	{
+	  "libraryId": 29,
+	  "name": "New Lynn War Memorial Library",
+	  "address": "3 Memorial Drive, New Lynn",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.9086019",
+	  "lon": "174.68338321482457",
+	  "osm_id": 100521156,
+	  "visited": false
+	},
+	{
+	  "libraryId": 30,
+	  "name": "Northcote Library",
+	  "address": "Norman King Square, 2 Ernie Mays St, Northcote",
+	  "hours": {
+		"Saturday": "10am - 4.30pm",
+		"Sunday": "10am - 4.30pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.800793299999995",
+	  "lon": "174.74703409139073",
+	  "osm_id": 324695357,
+	  "visited": false
+	},
+	{
+	  "libraryId": 31,
+	  "name": "Onehunga Library",
+	  "address": "85 Church St, Onehunga",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.9235302",
+	  "lon": "174.7844342",
+	  "osm_id": 3736669707,
+	  "visited": false
+	},
+	{
+	  "libraryId": 32,
+	  "name": "Ōrewa Library",
+	  "address": "12 Moana Ave, Ōrewa",
+	  "hours": {
+		"Saturday": "9.30am - 3.30pm",
+		"Sunday": "9.30am - 3.30pm",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 5pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.586920500000005",
+	  "lon": "174.69444404610624",
+	  "osm_id": 339633347,
+	  "visited": false
+	},
+	{
+	  "libraryId": 33,
+	  "name": "Ōtāhuhu Library",
+	  "address": "28-30 Mason Ave, Ōtāhuhu",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.94510495",
+	  "lon": "174.8408367940081",
+	  "osm_id": 364712053,
+	  "visited": false
+	},
+	{
+	  "libraryId": 34,
+	  "name": "Ōtara Library",
+	  "address": "Ōtara Town Centre, 46 Fair Mall, Ōtara",
+	  "hours": {
+		"Saturday": "8am - 1.30pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.960164",
+	  "lon": "174.87313793455382",
+	  "osm_id": 329253435,
+	  "visited": false
+	},
+	{
+	  "libraryId": 35,
+	  "name": "Pakuranga Library",
+	  "address": "7 Aylesbury St, Pakuranga",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.9130831",
+	  "lon": "174.8727512",
+	  "osm_id": 2946817851,
+	  "visited": false
+	},
+	{
+	  "libraryId": 36,
+	  "name": "Panmure Library",
+	  "address": "7-13 Pilkington Rd, Panmure",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 7pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.898696",
+	  "lon": "174.8546370671971",
+	  "osm_id": 301789353,
+	  "visited": false
+	},
+	{
+	  "libraryId": 37,
+	  "name": "Papatoetoe War Memorial Library",
+	  "address": "30 Wallace Rd, Papatoetoe",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 7pm",
+		"Thursday": "9am - 5pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "",
+	  "lon": "",
+	  "osm_id": "",
+	  "visited": false
+	},
+	{
+	  "libraryId": 38,
+	  "name": "Parnell Library",
+	  "address": "Jubilee Building, 545 Parnell Road, Parnell",
+	  "hours": {
+		"Saturday": "9am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "",
+	  "lon": "",
+	  "osm_id": "",
+	  "visited": false
+	},
+	{
+	  "libraryId": 39,
+	  "name": "Pt Chevalier Library",
+	  "address": "Annex at Point Chevalier Community Centre, 18 Huia Road, Pt Chevalier",
+	  "hours": {
+		"Saturday": "9am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "",
+	  "lon": "",
+	  "osm_id": "",
+	  "visited": false
+	},
+	{
+	  "libraryId": 40,
+	  "name": "Pukekohe Library",
+	  "address": "12 Massey Ave, Pukekohe",
+	  "hours": {
+		"Saturday": "9am - 3pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 7pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-37.2024714",
+	  "lon": "174.9045161",
+	  "osm_id": 967763822,
+	  "visited": false
+	},
+	{
+	  "libraryId": 41,
+	  "name": "Rānui Library",
+	  "address": "Cnr Swanson Rd and Armada Drive, Rānui",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.86332",
+	  "lon": "174.60235",
+	  "osm_id": 10779442430,
+	  "visited": false
+	},
+	{
+	  "libraryId": 42,
+	  "name": "Remuera Library",
+	  "address": "429 Remuera Rd, Remuera",
+	  "hours": {
+		"Saturday": "9am - 4pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.8811706",
+	  "lon": "174.8001811",
+	  "osm_id": 1668408125,
+	  "visited": false
+	},
+	{
+	  "libraryId": 43,
+	  "name": "Sir Edmund Hillary Library (Papakura)",
+	  "address": "209 Great South Rd, Papakura",
+	  "hours": {
+		"Saturday": "9am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 7pm",
+		"Thursday": "9am - 5pm",
+		"Friday": "9am - 7pm"
+	  },
+	  "lat": "-37.063771149999994",
+	  "lon": "174.94266202091654",
+	  "osm_id": 329838411,
+	  "visited": false
+	},
+	{
+	  "libraryId": 44,
+	  "name": "St Heliers Library",
+	  "address": "32 St Heliers Bay Road, St Heliers",
+	  "hours": {
+		"Saturday": "9am - 4pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.8511708",
+	  "lon": "174.8579488",
+	  "osm_id": 352833230,
+	  "visited": false
+	},
+	{
+	  "libraryId": 45,
+	  "name": "Takapuna Library",
+	  "address": "9 The Strand, Takapuna",
+	  "hours": {
+		"Saturday": "9.30am - 4.30pm",
+		"Sunday": "9.30am - 4.30pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 7.30pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.78906805",
+	  "lon": "174.7739506533252",
+	  "osm_id": 298972814,
+	  "visited": false
+	},
+	{
+	  "libraryId": 46,
+	  "name": "Te Atatū Peninsula Library",
+	  "address": "595 Te Atatū Rd, Te Atatū Peninsula",
+	  "hours": {
+		"Saturday": "9am - 3pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.8418093",
+	  "lon": "174.6521439",
+	  "osm_id": 726516297,
+	  "visited": false
+	},
+	{
+	  "libraryId": 47,
+	  "name": "Te Matariki Clendon Library",
+	  "address": "17 Palmers Rd, Manukau",
+	  "hours": {
+		"Saturday": "9am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 6.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-37.0340162",
+	  "lon": "174.8670672",
+	  "osm_id": 3736722744,
+	  "visited": false
+	},
+	{
+	  "libraryId": 48,
+	  "name": "Titirangi Library",
+	  "address": "500 South Titirangi Rd, Titirangi",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.9390076",
+	  "lon": "174.6555569",
+	  "osm_id": 3800529871,
+	  "visited": false
+	},
+	{
+	  "libraryId": 49,
+	  "name": "Tupu Youth Library",
+	  "address": "102 Dawson Rd, Ōtara",
+	  "hours": {
+		"Saturday": "9.30am - 4.30pm",
+		"Sunday": "12pm - 4pm",
+		"Monday": "9.30am - 6.30pm",
+		"Tuesday": "9.30am - 6.30pm",
+		"Wednesday": "9.30am - 6.30pm",
+		"Thursday": "9.30am - 6.30pm",
+		"Friday": "9.30am - 6.30pm"
+	  },
+	  "lat": "-36.9761005",
+	  "lon": "174.89514358758643",
+	  "osm_id": 329253465,
+	  "visited": false
+	},
+	{
+	  "libraryId": 50,
+	  "name": "Waiheke Library",
+	  "address": "131-133 Ocean View Rd, Oneroa, Waiheke Island",
+	  "hours": {
+		"Saturday": "10.30am - 4pm",
+		"Sunday": "10.30am - 4pm",
+		"Monday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Wednesday": "9am - 6pm",
+		"Thursday": "9am - 6pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.78132395",
+	  "lon": "175.00734415839082",
+	  "osm_id": 729263470,
+	  "visited": false
+	},
+	{
+	  "libraryId": 51,
+	  "name": "Waitākere Central Library (Henderson)",
+	  "address": "3 Ratanui St, Henderson",
+	  "hours": {
+		"Saturday": "10am - 4pm",
+		"Sunday": "10am - 4pm",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 7pm",
+		"Friday": "9am - 5.30pm"
+	  },
+	  "lat": "-36.87900775",
+	  "lon": "174.63336076788016",
+	  "osm_id": 76354615,
+	  "visited": false
+	},
+	{
+	  "libraryId": 52,
+	  "name": "Waiuku Library",
+	  "address": "Civic Centre, 10 King Street, Waiuku",
+	  "hours": {
+		"Saturday": "9am - 3pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5.30pm",
+		"Tuesday": "9am - 5.30pm",
+		"Wednesday": "9am - 5.30pm",
+		"Thursday": "9am - 5.30pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "",
+	  "lon": "",
+	  "osm_id": "",
+	  "visited": false
+	},
+	{
+	  "libraryId": 53,
+	  "name": "Warkworth Library",
+	  "address": "2 Baxter St, Warkworth",
+	  "hours": {
+		"Saturday": "9am - 3pm",
+		"Sunday": "10am - 3pm",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 5pm",
+		"Friday": "9am - 6pm"
+	  },
+	  "lat": "-36.3976094",
+	  "lon": "174.6665057",
+	  "osm_id": 1316019870,
+	  "visited": false
+	},
+	{
+	  "libraryId": 54,
+	  "name": "Wellsford War Memorial Library",
+	  "address": "13 Port Albert Rd, Wellsford",
+	  "hours": {
+		"Saturday": "9am - 1pm",
+		"Sunday": "Closed",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 5pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.2974883",
+	  "lon": "174.5227258",
+	  "osm_id": 3735228024,
+	  "visited": false
+	},
+	{
+	  "libraryId": 55,
+	  "name": "Whangaparāoa Library",
+	  "address": "9 Main St, Whangaparāoa",
+	  "hours": {
+		"Saturday": "9.30am - 3.30pm",
+		"Sunday": "9.30am - 3.30pm",
+		"Monday": "9am - 5pm",
+		"Tuesday": "9am - 5pm",
+		"Wednesday": "9am - 5pm",
+		"Thursday": "9am - 5pm",
+		"Friday": "9am - 5pm"
+	  },
+	  "lat": "-36.635645499999995",
+	  "lon": "174.7471360253623",
+	  "osm_id": 339512001,
+	  "visited": false
+	},
+	{
+	  "libraryId": 56,
+	  "name": "Research Central",
+	  "address": "Level 2, Central City Library, 44-46 Lorne St, Auckland Central",
+	  "hours": {
+		"Saturday": "10am - 5pm",
+		"Sunday": "Closed",
+		"Monday": "10am - 6pm",
+		"Tuesday": "10am - 6pm",
+		"Wednesday": "10am - 6pm",
+		"Thursday": "10am - 6pm",
+		"Friday": "10am - 6pm"
+	  },
+	  "lat": "",
+	  "lon": "",
+	  "osm_id": "",
+	  "visited": false
+	}
+  ]

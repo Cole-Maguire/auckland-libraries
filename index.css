@@ -1,0 +1,17 @@
+#list { width: 42vw; height: 100vh; overflow:scroll }
+#map { width: 55vw; height: 100vh;position: absolute; top:0; right:0 }
+body{
+	font-family: 'helvetica', 'arial'
+}
+.libraryElement{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding:10;
+}.libraryElement h3{
+	margin:0;
+}
+.libraryElement input{
+	width: 40px;
+    height: 40px;
+}
