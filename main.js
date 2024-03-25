@@ -3,6 +3,11 @@ const LIBRARY_URL = "https://api.npoint.io/8dfe6b3483094464d038";
 const libraries = await (await fetch(LIBRARY_URL)).json();
 
 const list = document.querySelector("#list");
+list.innerText = `Libraries visited: ${
+	libraries.filter((lib) => lib.visited).length
+} / ${libraries.length} - ${Math.round(
+	(libraries.filter((lib) => lib.visited).length * 100) / libraries.length
+)}%`;
 
 const map = L.map("map").setView([-36.8977, 174.9188], 11);
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
