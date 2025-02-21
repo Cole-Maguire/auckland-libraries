@@ -1,11 +1,14 @@
-type Days =
-	| "Saturday"
-	| "Sunday"
-	| "Monday"
-	| "Tuesday"
-	| "Wednesday"
-	| "Thursday"
-	| "Friday";
+export const Days = [
+	"Monday",
+	"Tuesday",
+	"Wednesday",
+	"Thursday",
+	"Friday",
+	"Saturday",
+	"Sunday",
+] as const;
+
+type Days = (typeof Days)[number];
 
 type NumericString = `${number}`;
 
