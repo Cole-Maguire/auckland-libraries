@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useMemo } from "react";
 import { Library } from "./models/Library";
+import { List } from "./components/List";
 
 const libraries: Library[] = [
   {
@@ -1008,11 +1009,13 @@ export default function Home() {
   );
   return (
     <div className="flex h-screen w-screen flex-col font-[family-name:var(--font-geist-sans)]">
-      <header>
-        <h1 className="h1">Auckland Library Tracker</h1>
+      <header className="p-4">
+        <h1 className="text-2xl">Auckland Library Tracker</h1>
       </header>
-      <main className="flex h-full grow flex-row items-center gap-8 sm:items-start">
-        <div>Labany Library Avondale Library</div>
+      <main className="flex h-4/5 grow flex-row items-center gap-0 sm:items-start">
+        <div className="h-full grow">
+          <List libraries={libraries} />
+        </div>
         <div className="h-full w-full grow">
           <Map
             startPosition={[-36.8977, 174.9188]}
@@ -1024,48 +1027,18 @@ export default function Home() {
       <footer className="h-1/10 flex flex-wrap items-center justify-center gap-6">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://github.com/Cole-Maguire"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
-            src="/file.svg"
-            alt="File icon"
+            src="/github-mark.svg"
+            alt="GitHub logo"
             width={16}
             height={16}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          Visit me on Github!
         </a>
       </footer>
     </div>
