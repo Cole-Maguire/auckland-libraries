@@ -1,6 +1,8 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Library } from "./models/Library";
 import { List } from "./components/List";
 
@@ -999,6 +1001,7 @@ const libraries: Library[] = [
 ] as const;
 
 export default function Home() {
+  // imported like this, as leaflet needs to be all client side
   const Map = useMemo(
     () =>
       dynamic(() => import("@/app/components/Map"), {
@@ -1007,6 +1010,11 @@ export default function Home() {
       }),
     [],
   );
+
+  const [highlightedLibrary, setHighlightedLibrary] = useState<Library | null>(
+    null,
+  );
+
   return (
     <div className="flex h-screen w-screen flex-col font-[family-name:var(--font-geist-sans)]">
       <header className="p-4">
@@ -1014,13 +1022,19 @@ export default function Home() {
       </header>
       <main className="flex h-4/5 grow flex-row items-center gap-0 sm:items-start">
         <div className="h-full grow">
-          <List libraries={libraries} />
+          <List
+            libraries={libraries}
+            highlightedLibrary={highlightedLibrary}
+            setHighlightedLibrary={setHighlightedLibrary}
+          />
         </div>
         <div className="h-full w-full grow">
           <Map
             startPosition={[-36.8977, 174.9188]}
             zoom={11}
             libraries={libraries}
+            highlightedLibrary={highlightedLibrary}
+            setHighlightedLibrary={setHighlightedLibrary}
           />
         </div>
       </main>

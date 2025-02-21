@@ -4,7 +4,7 @@ import { LatLngExpression } from "leaflet";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
-import { JSX } from "react";
+import { Dispatch, JSX, SetStateAction } from "react";
 import { Circle, MapContainer, Popup, TileLayer } from "react-leaflet";
 import { Days, Library } from "../models/Library";
 
@@ -14,12 +14,16 @@ interface MapProps {
   startPosition: LatLngExpression;
   zoom?: number;
   libraries: Library[];
+  highlightedLibrary: Library | null;
+  setHighlightedLibrary: Dispatch<SetStateAction<Library | null>>;
 }
 
 export default function Map({
   startPosition,
   zoom = 13,
   libraries,
+  highlightedLibrary,
+  setHighlightedLibrary,
 }: MapProps): JSX.Element {
   return (
     <MapContainer
@@ -32,17 +36,34 @@ export default function Map({
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {libraries.map((library) => (
-        <LibraryDot key={library.libraryId} library={library} />
+        <LibraryDot
+          key={library.libraryId}
+          library={library}
+          highlightedLibrary={highlightedLibrary}
+          setHighlightedLibrary={setHighlightedLibrary}
+        />
       ))}
+      {highlightedLibrary !== null && (
+        <LibraryPopup
+          today={today}
+          library={highlightedLibrary}
+          setHighlightedLibrary={setHighlightedLibrary}
+        />
+      )}
     </MapContainer>
   );
 }
 
 type LibraryDotProps = {
   library: Library;
+  highlightedLibrary: Library | null;
+  setHighlightedLibrary: Dispatch<SetStateAction<Library | null>>;
 };
 
-export function LibraryDot({ library }: LibraryDotProps): JSX.Element {
+export function LibraryDot({
+  library,
+  setHighlightedLibrary,
+}: LibraryDotProps): JSX.Element {
   const color = library.visited ? "green" : "red";
   const openSundays = library.hours.Sunday !== "Closed" ? 1 : 0.1;
 
@@ -53,20 +74,32 @@ export function LibraryDot({ library }: LibraryDotProps): JSX.Element {
       fillColor={color}
       fillOpacity={openSundays}
       radius={300}
-    >
-      <LibraryPopup library={library} today={today} />
-    </Circle>
+      eventHandlers={{ click: () => setHighlightedLibrary(library) }}
+    ></Circle>
   );
 }
 
 type LibraryPopupProps = {
   library: Library;
   today: Date;
+  setHighlightedLibrary: Dispatch<SetStateAction<Library | null>>;
 };
 
-function LibraryPopup({ library, today }: LibraryPopupProps): JSX.Element {
+function LibraryPopup({
+  library,
+  today,
+  setHighlightedLibrary,
+}: LibraryPopupProps): JSX.Element {
   return (
-    <Popup>
+    <Popup
+      position={[parseFloat(library.lat), parseFloat(library.lon)]}
+      eventHandlers={{
+        remove: () => {
+          setHighlightedLibrary(null);
+          console.debug("remove", library);
+        },
+      }}
+    >
       <span className="font-bold">{library.name}</span>
       <div>
         {...Days.map((day) => (

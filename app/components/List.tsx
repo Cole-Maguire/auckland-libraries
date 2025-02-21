@@ -1,17 +1,37 @@
-import { JSX } from "react";
+import { Dispatch, JSX, SetStateAction, useEffect, useRef } from "react";
 import { Library } from "../models/Library";
 
 type ListProps = {
   libraries: Library[];
+  highlightedLibrary: Library | null;
+  setHighlightedLibrary: Dispatch<SetStateAction<Library | null>>;
 };
 
-export function List({ libraries }: ListProps): JSX.Element {
+export function List({
+  libraries,
+  highlightedLibrary,
+  setHighlightedLibrary,
+}: ListProps): JSX.Element {
+  const ref = useRef<Record<number, HTMLDivElement | null>>({});
+
+  useEffect(() => {
+    if (highlightedLibrary) {
+      ref.current[highlightedLibrary.libraryId]?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  });
   return (
     <div className="h-full overflow-y-auto p-4">
       {libraries.map((library) => (
         <div
           key={library.libraryId}
-          className="flex items-center justify-between"
+          className={`duration-400 flex items-center justify-between transition-all ${highlightedLibrary?.libraryId === library.libraryId ? "bg-red-50" : ""}`}
+          ref={(e) => {
+            ref.current[library.libraryId] = e;
+          }}
+          onClick={() => setHighlightedLibrary(library)}
         >
           <div>
             <h3 className="text-lg">{library.name}</h3>
