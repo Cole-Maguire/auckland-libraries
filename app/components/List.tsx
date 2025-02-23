@@ -1,14 +1,19 @@
 import { Dispatch, JSX, SetStateAction, useEffect, useRef } from "react";
 import { Library } from "../models/Library";
+import { toggleLibrary } from "../services/api";
 
 type ListProps = {
+  saveID: string;
   libraries: Library[];
+  setLibraries: Dispatch<SetStateAction<Library[]>>;
   highlightedLibrary: Library | null;
   setHighlightedLibrary: Dispatch<SetStateAction<Library | null>>;
 };
 
 export function List({
+  saveID,
   libraries,
+  setLibraries,
   highlightedLibrary,
   setHighlightedLibrary,
 }: ListProps): JSX.Element {
@@ -50,6 +55,10 @@ export function List({
             type="checkbox"
             checked={library.visited}
             className="h-8 w-8"
+            onChange={async () => {
+              await toggleLibrary(saveID, library, libraries);
+              setLibraries([...libraries]); // gotta force a ref change after all of our mucky mutation
+            }}
           />
         </div>
       ))}

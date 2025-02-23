@@ -1,16 +1,17 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { JSX, useEffect, useMemo, useState } from "react";
 import { Library } from "../models/Library";
+import defaultLibraries from "../resources/defaultLibraries";
+import { fetchLibraries } from "../services/api";
 import { List } from "./List";
-import dynamic from "next/dynamic";
 
 type MainProps = {
   className: string;
-  defaultLibraries: Library[];
 };
 
-export function Main({ className, defaultLibraries }: MainProps): JSX.Element {
+export function Main({ className }: MainProps): JSX.Element {
   const Map = useMemo(
     () =>
       dynamic(() => import("@/app/components/Map"), {
@@ -19,18 +20,28 @@ export function Main({ className, defaultLibraries }: MainProps): JSX.Element {
       }),
     [],
   );
+
+  const [libraries, setLibraries] = useState<Library[]>(defaultLibraries);
   const [highlightedLibrary, setHighlightedLibrary] = useState<Library | null>(
     null,
   );
+  const [saveID, setSaveID] = useState<string>("8dfe6b3483094464d038"); // todo - this is the old url, replace me with blank once saves are setup
 
-  //   const [saveID, setSaveID] = useState<string>();
-  const [libraries, setLibraries] = useState<Library[]>(defaultLibraries);
+  useEffect(() => {
+    async function setAsync() {
+      setLibraries(await fetchLibraries(saveID));
+      console.debug("useEffect saveID");
+    }
+    setAsync();
+  }, [saveID]);
 
   return (
     <main className={`${className}`}>
       <div className="h-full grow">
         <List
+          saveID={saveID}
           libraries={libraries}
+          setLibraries={setLibraries}
           highlightedLibrary={highlightedLibrary}
           setHighlightedLibrary={setHighlightedLibrary}
         />

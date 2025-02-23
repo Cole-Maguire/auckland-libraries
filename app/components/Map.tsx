@@ -5,7 +5,7 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet/dist/leaflet.css";
 import { Dispatch, JSX, SetStateAction } from "react";
-import { Circle, MapContainer, Popup, TileLayer } from "react-leaflet";
+import { CircleMarker, MapContainer, Popup, TileLayer } from "react-leaflet";
 import { Days, Library } from "../models/Library";
 
 const today = new Date();
@@ -35,6 +35,7 @@ export default function Map({
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+
       {libraries.map((library) => (
         <LibraryDot
           key={library.libraryId}
@@ -43,6 +44,7 @@ export default function Map({
           setHighlightedLibrary={setHighlightedLibrary}
         />
       ))}
+
       {highlightedLibrary !== null && (
         <LibraryPopup
           today={today}
@@ -60,7 +62,7 @@ type LibraryDotProps = {
   setHighlightedLibrary: Dispatch<SetStateAction<Library | null>>;
 };
 
-export function LibraryDot({
+function LibraryDot({
   library,
   setHighlightedLibrary,
 }: LibraryDotProps): JSX.Element {
@@ -68,14 +70,12 @@ export function LibraryDot({
   const openSundays = library.hours.Sunday !== "Closed" ? 1 : 0.1;
 
   return (
-    <Circle
+    <CircleMarker
       center={[parseFloat(library.lat), parseFloat(library.lon)]}
-      color={color}
-      fillColor={color}
-      fillOpacity={openSundays}
-      radius={300}
+      pathOptions={{ color: color, fillColor: color, fillOpacity: openSundays }}
+      radius={4}
       eventHandlers={{ click: () => setHighlightedLibrary(library) }}
-    ></Circle>
+    />
   );
 }
 
@@ -94,10 +94,7 @@ function LibraryPopup({
     <Popup
       position={[parseFloat(library.lat), parseFloat(library.lon)]}
       eventHandlers={{
-        remove: () => {
-          setHighlightedLibrary(null);
-          console.debug("remove", library);
-        },
+        remove: () => setHighlightedLibrary(null),
       }}
     >
       <span className="font-bold">{library.name}</span>
