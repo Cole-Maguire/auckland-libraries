@@ -36,8 +36,10 @@ export function Main({ className }: MainProps): JSX.Element {
   }, [saveID]);
 
   return (
-    <main className={`${className}`}>
-      <div className="h-full grow">
+    <main
+      className={`${className} flex grow flex-col-reverse items-center gap-0 md:flex-row md:items-start`}
+    >
+      <div className="h-1/3 w-full grow md:h-full">
         <List
           saveID={saveID}
           libraries={libraries}

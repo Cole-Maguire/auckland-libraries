@@ -7,7 +7,7 @@ export default async function Home() {
       <header className="p-4">
         <h1 className="text-2xl">Auckland Library Tracker</h1>
       </header>
-      <Main className="flex h-4/5 grow flex-row items-center gap-0 sm:items-start" />
+      <Main className="h-4/5" />
       <footer className="h-1/10 flex flex-wrap items-center justify-center gap-6">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

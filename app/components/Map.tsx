@@ -73,7 +73,7 @@ function LibraryDot({
     <CircleMarker
       center={[parseFloat(library.lat), parseFloat(library.lon)]}
       pathOptions={{ color: color, fillColor: color, fillOpacity: openSundays }}
-      radius={4}
+      radius={5}
       eventHandlers={{ click: () => setHighlightedLibrary(library) }}
     />
   );
