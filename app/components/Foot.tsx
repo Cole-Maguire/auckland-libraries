@@ -53,11 +53,11 @@ export function Foot({ className = "", libraries }: FootProps): JSX.Element {
           };
           if (navigator.canShare(shareable)) {
             await navigator.share(shareable);
-          } else {
-            await navigator.clipboard.writeText(window.location.href);
-            setShareText("Copied!");
-            setTimeout(() => setShareText(defaultShareText), 3000);
           }
+          // not an if-else because sometimes sharing can be weird
+          await navigator.clipboard.writeText(window.location.href);
+          setShareText("Copied!");
+          setTimeout(() => setShareText(defaultShareText), 3000);
         }}
       >
         <span
