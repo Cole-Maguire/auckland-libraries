@@ -2,12 +2,16 @@ import { initializeApp } from "firebase/app";
 import {
   collection,
   doc,
+  DocumentData,
+  DocumentReference,
   getDoc,
   getDocs,
   getFirestore,
+  setDoc,
   updateDoc,
 } from "firebase/firestore";
 import { Library, Visits } from "../models/Library";
+import { wordList } from "../resources/wordList";
 
 // Initialize Firebase
 const app = initializeApp({
@@ -24,6 +28,10 @@ type DefaultLibrary = Library & { visited: never };
  */
 export class Api {
   constructor(private saveID: string) {}
+
+  public get readyToRender(): boolean {
+    return !!this.saveID;
+  }
 
   async toggleLibrary(library: Library): Promise<void> {
     // for local display
@@ -45,6 +53,16 @@ export class Api {
   async fetchLibraries(): Promise<Library[]> {
     const libraryDocs = await getDocs(collection(db, "libraries"));
 
+    if (!this.saveID) {
+      return Object.values(libraryDocs.docs).map((libraryDoc) => {
+        const library = libraryDoc.data() as DefaultLibrary;
+        return {
+          ...library,
+          visited: false,
+        };
+      });
+    }
+
     const visitsDoc = await getDoc(doc(db, "visits", this.saveID));
     if (!visitsDoc.exists()) {
       throw new Error(`saveID {${this.saveID}} not found in firestore`);
@@ -60,4 +78,27 @@ export class Api {
       };
     });
   }
+  async newSaveID(): Promise<string> {
+    let flag = true;
+    let visitRef: DocumentReference<DocumentData, DocumentData>;
+    let newSaveID: string;
+    do {
+      newSaveID = generateRandomPassword(3);
+      visitRef = doc(db, "visits", newSaveID);
+      if (!(await getDoc(visitRef)).exists()) {
+        flag = false;
+      }
+    } while (flag);
+    await setDoc(visitRef, {});
+
+    this.saveID = newSaveID;
+    return newSaveID;
+  }
+}
+
+export function generateRandomPassword(length: number): string {
+  return Array(length)
+    .fill(0)
+    .map(() => wordList[Math.ceil(Math.random() * 1000)])
+    .join("-");
 }

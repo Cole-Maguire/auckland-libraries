@@ -49,13 +49,15 @@ export function Main({ className, api }: MainProps): JSX.Element {
         />
       </div>
       <div className="h-full w-full grow">
-        <Map
-          startPosition={[-36.8977, 174.9188]}
-          zoom={11}
-          libraries={libraries}
-          highlightedLibrary={highlightedLibrary}
-          setHighlightedLibrary={setHighlightedLibrary}
-        />
+        {api.readyToRender && (
+          <Map
+            startPosition={[-36.8977, 174.9188]}
+            zoom={11}
+            libraries={libraries}
+            highlightedLibrary={highlightedLibrary}
+            setHighlightedLibrary={setHighlightedLibrary}
+          />
+        )}
       </div>
     </main>
   );

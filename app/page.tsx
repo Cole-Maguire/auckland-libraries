@@ -1,13 +1,46 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import {} from "next/router";
+import { useEffect, useState } from "react";
 import { Main } from "./components/Main";
 import Head from "./header";
 import { Api } from "./services/api";
 
 export default function Home() {
-  const [saveID, setSaveID] = useState<string>("test-visited");
-  const api = new Api(saveID); // todo - this is the old url, replace me with blank once saves are setup
+  const [saveID, setSaveID] = useState<string>("");
+  const [api, setApi] = useState<Api>(new Api(saveID));
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setApi(new Api(saveID));
+  }, [saveID]);
+
+  useEffect(() => {
+    const f = async () => {
+      const querySaveID = searchParams.get("saveID");
+      const localSaveID = localStorage.getItem("saveID");
+
+      if (!querySaveID && localSaveID) {
+        const params = new URLSearchParams({ saveID: localSaveID });
+        router.push(pathname + "?" + params);
+      } else if (querySaveID && localSaveID) {
+        setSaveID(querySaveID);
+        // router.refresh(); // todo a more elegant map refresh
+      } else if (querySaveID && !localSaveID) {
+        setSaveID(querySaveID);
+        localStorage.setItem("saveID", querySaveID);
+        router.refresh(); // todo a more elegant map refresh
+      } else if (!querySaveID && !localSaveID) {
+        const newSaveID = await api.newSaveID();
+        const params = new URLSearchParams({ saveID: newSaveID });
+        router.push(pathname + "?" + params);
+      }
+    };
+    f();
+  }, [api, pathname, router, saveID, searchParams]);
 
   return (
     <div className="flex h-screen w-screen flex-col font-[family-name:var(--font-geist-sans)]">
