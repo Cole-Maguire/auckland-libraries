@@ -32,7 +32,7 @@
 	  },
 	  "osm_id": 320850907,
 	  "address": "93 Rosebank Rd, Avondale",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 2
 	},
 	{
@@ -50,7 +50,7 @@
 	  },
 	  "osm_id": 266759657,
 	  "address": "Nell Fisher Reserve, Hinemoa St, Birkenhead",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 3
 	},
 	{
@@ -68,7 +68,7 @@
 	  },
 	  "osm_id": 174551221,
 	  "address": "578 Blockhouse Bay Rd, Blockhouse Bay",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 4
 	},
 	{
@@ -86,7 +86,7 @@
 	  },
 	  "osm_id": 10236459061,
 	  "address": "Level 1, Botany Town Centre, Sunset Terrace, East Tāmaki",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 5
 	},
 	{
@@ -122,7 +122,7 @@
 	  },
 	  "osm_id": 339843067,
 	  "address": "2 Victoria Rd, Devonport",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 7
 	},
 	{
@@ -140,7 +140,7 @@
 	  },
 	  "osm_id": 337148515,
 	  "address": "8 Bute Rd, Browns Bay",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 8
 	},
 	{
@@ -158,7 +158,7 @@
 	  },
 	  "osm_id": 1484417975,
 	  "address": "195 Manukau Rd, Epsom",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 9
 	},
 	{
@@ -176,7 +176,7 @@
 	  },
 	  "osm_id": 140630487,
 	  "address": "12-32 Glendale Rd, Glen Eden",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 10
 	},
 	{
@@ -194,7 +194,7 @@
 	  },
 	  "osm_id": 155749089,
 	  "address": "108 Line Rd, Glen Innes",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 11
 	},
 	{
@@ -212,7 +212,7 @@
 	  },
 	  "osm_id": 329615292,
 	  "address": "90 Bentley Ave, Glenfield",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 12
 	},
 	{
@@ -248,7 +248,7 @@
 	  },
 	  "osm_id": 660043817,
 	  "address": "474 Great North Rd, Grey Lynn",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 14
 	},
 	{
@@ -284,7 +284,7 @@
 	  },
 	  "osm_id": 3736691327,
 	  "address": "16 Highland Park Drive, Highland Park",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 16
 	},
 	{
@@ -302,7 +302,7 @@
 	  },
 	  "osm_id": 3013702640,
 	  "address": "25 Uxbridge Rd, Howick",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 17
 	},
 	{
@@ -356,7 +356,7 @@
 	  },
 	  "osm_id": 114372295,
 	  "address": "5-7 Church Rd, Māngere Bridge",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 21
 	},
 	{
@@ -374,7 +374,7 @@
 	  },
 	  "osm_id": 978589799,
 	  "address": "370 Massey Rd, Māngere East",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 22
 	},
 	{
@@ -392,7 +392,7 @@
 	  },
 	  "osm_id": 2542919946,
 	  "address": "121 Bader Drive, Māngere",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 23
 	},
 	{
@@ -410,7 +410,7 @@
 	  },
 	  "osm_id": 114661396,
 	  "address": "3 Osterley Way, Manukau",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 24
 	},
 	{
@@ -428,7 +428,7 @@
 	  },
 	  "osm_id": 467025275,
 	  "address": "7 Hill Rd, Manurewa",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 25
 	},
 	{
@@ -446,7 +446,7 @@
 	  },
 	  "osm_id": 62004195,
 	  "address": "84 St Lukes Rd, Mt Albert",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 27
 	},
 	{
@@ -464,7 +464,7 @@
 	  },
 	  "osm_id": 1827167988,
 	  "address": "546 Mt Albert Rd, Mt Roskill",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 28
 	},
 	{
@@ -482,7 +482,7 @@
 	  },
 	  "osm_id": 100521156,
 	  "address": "3 Memorial Drive, New Lynn",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 29
 	},
 	{
@@ -500,7 +500,7 @@
 	  },
 	  "osm_id": 324695357,
 	  "address": "Norman King Square, 2 Ernie Mays St, Northcote",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 30
 	},
 	{
@@ -518,7 +518,7 @@
 	  },
 	  "osm_id": 3736669707,
 	  "address": "85 Church St, Onehunga",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 31
 	},
 	{
@@ -536,7 +536,7 @@
 	  },
 	  "osm_id": 339633347,
 	  "address": "12 Moana Ave, Ōrewa",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 32
 	},
 	{
@@ -554,7 +554,7 @@
 	  },
 	  "osm_id": 364712053,
 	  "address": "28-30 Mason Ave, Ōtāhuhu",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 33
 	},
 	{
@@ -572,7 +572,7 @@
 	  },
 	  "osm_id": 329253435,
 	  "address": "Ōtara Town Centre, 46 Fair Mall, Ōtara",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 34
 	},
 	{
@@ -590,7 +590,7 @@
 	  },
 	  "osm_id": 2946817851,
 	  "address": "7 Aylesbury St, Pakuranga",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 35
 	},
 	{
@@ -608,7 +608,7 @@
 	  },
 	  "osm_id": 301789353,
 	  "address": "7-13 Pilkington Rd, Panmure",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 36
 	},
 	{
@@ -626,7 +626,7 @@
 	  },
 	  "osm_id": "53202830",
 	  "address": "30 Wallace Rd, Papatoetoe",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 37
 	},
 	{
@@ -644,7 +644,7 @@
 	  },
 	  "osm_id": "",
 	  "address": "Jubilee Building, 545 Parnell Road, Parnell",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 38
 	},
 	{
@@ -680,7 +680,7 @@
 	  },
 	  "osm_id": 967763822,
 	  "address": "12 Massey Ave, Pukekohe",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 40
 	},
 	{
@@ -716,7 +716,7 @@
 	  },
 	  "osm_id": 1668408125,
 	  "address": "429 Remuera Rd, Remuera",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 42
 	},
 	{
@@ -734,7 +734,7 @@
 	  },
 	  "osm_id": 329838411,
 	  "address": "209 Great South Rd, Papakura",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 43
 	},
 	{
@@ -770,7 +770,7 @@
 	  },
 	  "osm_id": 298972814,
 	  "address": "9 The Strand, Takapuna",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 45
 	},
 	{
@@ -806,7 +806,7 @@
 	  },
 	  "osm_id": 3736722744,
 	  "address": "17 Palmers Rd, Manukau",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 47
 	},
 	{
@@ -824,7 +824,7 @@
 	  },
 	  "osm_id": 3800529871,
 	  "address": "500 South Titirangi Rd, Titirangi",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 48
 	},
 	{
@@ -842,7 +842,7 @@
 	  },
 	  "osm_id": 329253465,
 	  "address": "102 Dawson Rd, Ōtara",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 49
 	},
 	{
@@ -878,7 +878,7 @@
 	  },
 	  "osm_id": 76354615,
 	  "address": "3 Ratanui St, Henderson",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 51
 	},
 	{
@@ -896,7 +896,7 @@
 	  },
 	  "osm_id": "",
 	  "address": "Civic Centre, 10 King Street, Waiuku",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 52
 	},
 	{
@@ -950,7 +950,43 @@
 	  },
 	  "osm_id": 339512001,
 	  "address": "9 Main St, Whangaparāoa",
-	  "visited": false,
+	  "visited": true,
 	  "libraryId": 55
+	},
+	{
+	  "lat": "-36.8187082",
+	  "lon": "174.6095749",
+	  "name": "Te Manawa (Westgate)",
+	  "hours": {
+		"Friday": "9am - 7pm",
+		"Monday": "9am - 6pm",
+		"Sunday": "9am - 6pm",
+		"Tuesday": "9am - 6pm",
+		"Saturday": "9am - 6pm",
+		"Thursday": "9am - 9pm",
+		"Wednesday": "9am - 6pm"
+	  },
+	  "osm_id": 724812016,
+	  "address": "11 Kohuhu Lane, Massey",
+	  "visited": true,
+	  "libraryId": 69
+	},
+	{
+	  "lat": "-37.0462555",
+	  "lon": "174.9307402",
+	  "name": "Takaanini Community Hub and Library",
+	  "hours": {
+		"Friday": "9am - 5pm",
+		"Monday": "9am - 5pm",
+		"Sunday": "10am - 4pm",
+		"Tuesday": "9am - 5pm",
+		"Saturday": "9am - 5pm",
+		"Thursday": "9am - 5pm",
+		"Wednesday": "9am - 5pm"
+	  },
+	  "osm_id": 826116088,
+	  "address": "30 Walters Road, Takanini",
+	  "visited": true,
+	  "libraryId": 73
 	}
   ]
