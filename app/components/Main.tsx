@@ -4,14 +4,15 @@ import dynamic from "next/dynamic";
 import { JSX, useEffect, useMemo, useState } from "react";
 import { Library } from "../models/Library";
 import defaultLibraries from "../resources/defaultLibraries";
-import { fetchLibraries } from "../services/api";
+import { Api } from "../services/api";
 import { List } from "./List";
 
 type MainProps = {
   className: string;
+  api: Api;
 };
 
-export function Main({ className }: MainProps): JSX.Element {
+export function Main({ className, api }: MainProps): JSX.Element {
   const Map = useMemo(
     () =>
       dynamic(() => import("@/app/components/Map"), {
@@ -25,15 +26,14 @@ export function Main({ className }: MainProps): JSX.Element {
   const [highlightedLibrary, setHighlightedLibrary] = useState<Library | null>(
     null,
   );
-  const [saveID, setSaveID] = useState<string>("8dfe6b3483094464d038"); // todo - this is the old url, replace me with blank once saves are setup
 
   useEffect(() => {
     async function setAsync() {
-      setLibraries(await fetchLibraries(saveID));
+      setLibraries(await api.fetchLibraries());
       console.debug("useEffect saveID");
     }
     setAsync();
-  }, [saveID]);
+  }, [api]);
 
   return (
     <main
@@ -41,11 +41,11 @@ export function Main({ className }: MainProps): JSX.Element {
     >
       <div className="h-1/3 w-full grow md:h-full">
         <List
-          saveID={saveID}
           libraries={libraries}
           setLibraries={setLibraries}
           highlightedLibrary={highlightedLibrary}
           setHighlightedLibrary={setHighlightedLibrary}
+          api={api}
         />
       </div>
       <div className="h-full w-full grow">

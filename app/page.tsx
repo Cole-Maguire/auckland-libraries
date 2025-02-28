@@ -1,13 +1,18 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 import { Main } from "./components/Main";
+import Head from "./header";
+import { generateApi } from "./services/api";
 
-export default async function Home() {
+export default function Home() {
+  const [saveID, setSaveID] = useState<string>("8dfe6b3483094464d038");
+  const api = generateApi(saveID); // todo - this is the old url, replace me with blank once saves are setup
+
   return (
     <div className="flex h-screen w-screen flex-col font-[family-name:var(--font-geist-sans)]">
-      <header className="p-4">
-        <h1 className="text-2xl">Auckland Library Tracker</h1>
-      </header>
-      <Main className="h-4/5" />
+      <Head saveID={saveID} setSaveID={setSaveID} className="p-4" />
+      <Main className="h-4/5" api={api} />
       <footer className="h-1/10 flex flex-wrap items-center justify-center gap-6">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

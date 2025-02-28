@@ -1,21 +1,21 @@
 import { Dispatch, JSX, SetStateAction, useEffect, useRef } from "react";
 import { Library } from "../models/Library";
-import { toggleLibrary } from "../services/api";
+import { Api } from "../services/api";
 
 type ListProps = {
-  saveID: string;
   libraries: Library[];
   setLibraries: Dispatch<SetStateAction<Library[]>>;
   highlightedLibrary: Library | null;
   setHighlightedLibrary: Dispatch<SetStateAction<Library | null>>;
+  api: Pick<Api, "toggleLibrary">;
 };
 
 export function List({
-  saveID,
   libraries,
   setLibraries,
   highlightedLibrary,
   setHighlightedLibrary,
+  api,
 }: ListProps): JSX.Element {
   const ref = useRef<Record<number, HTMLDivElement | null>>({});
 
@@ -56,7 +56,7 @@ export function List({
             checked={library.visited}
             className="h-8 w-8"
             onChange={async () => {
-              await toggleLibrary(saveID, library, libraries);
+              await api.toggleLibrary(library, libraries);
               setLibraries([...libraries]); // gotta force a ref change after all of our mucky mutation
             }}
           />
