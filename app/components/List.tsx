@@ -38,7 +38,7 @@ export function List({
         .map((library) => (
           <div
             key={library.libraryId}
-            className={`duration-400 mb-4 flex items-center justify-between rounded-lg p-4 shadow transition-all ${
+            className={`duration-400 mb-4 flex items-center justify-between rounded-lg p-4 text-gray-900 shadow transition-all ${
               highlightedLibrary?.libraryId === library.libraryId
                 ? "bg-red-50"
                 : "bg-gray-200"
