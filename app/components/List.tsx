@@ -7,7 +7,7 @@ type ListProps = {
   setLibraries: Dispatch<SetStateAction<Library[]>>;
   highlightedLibrary: Library | null;
   setHighlightedLibrary: Dispatch<SetStateAction<Library | null>>;
-  api: Pick<Api, "toggleLibrary">;
+  api: Api;
 };
 
 export function List({
@@ -62,7 +62,7 @@ export function List({
               checked={library.visited}
               className="h-6 w-6 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               onChange={async () => {
-                await api.toggleLibrary(library, libraries);
+                await api.toggleLibrary(library);
                 setLibraries([...libraries]); // gotta force a ref change after all of our mucky mutation
               }}
             />

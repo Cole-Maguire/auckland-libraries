@@ -1,35 +1,63 @@
-import { Library } from "../models/Library";
-import defaultLibraries from "../resources/defaultLibraries";
+import { initializeApp } from "firebase/app";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  updateDoc,
+} from "firebase/firestore";
+import { Library, Visits } from "../models/Library";
 
-const API_URL = "https://api.npoint.io/";
+// Initialize Firebase
+const app = initializeApp({
+  projectId: "auckland-libraries-452302",
+});
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
 
-export function fetchLibraries(saveID?: string): () => Promise<Library[]> {
-  return async () => {
-    if (!saveID) {
-      return defaultLibraries;
-    } else {
-      const res = await fetch(`${API_URL}${saveID}`);
-      return res.json();
-    }
-  };
-}
+type DefaultLibrary = Library & { visited: never };
 
-export function toggleLibrary(
-  saveID: string,
-): (library: Library, libraries: Library[]) => Promise<void> {
-  return async (library, libraries) => {
+/** use firestore because it's quick (but mostly because it's on Google's free tier and Cloud SQL isn't)
+ *
+ * Security is handled using Firestore rules.
+ */
+export class Api {
+  constructor(private saveID: string) {}
+
+  async toggleLibrary(library: Library): Promise<void> {
+    // for local display
     library.visited = !library.visited;
-    await fetch(`${API_URL}${saveID}`, {
-      method: "POST",
-      body: JSON.stringify(libraries),
-    });
-  };
-}
 
-export function generateApi(saveID: string) {
-  return {
-    toggleLibrary: toggleLibrary(saveID),
-    fetchLibraries: fetchLibraries(saveID),
-  };
+    const visitRef = doc(db, "visits", this.saveID);
+    const visitsDoc = await getDoc(visitRef);
+    if (!visitsDoc.exists()) {
+      throw new Error(`saveID {${this.saveID}} not found in firestore`);
+    }
+    const visits: Visits = visitsDoc.data();
+
+    const body = {
+      [library.libraryId]: !(visits[library.libraryId] ?? false),
+    };
+    await updateDoc(visitRef, body);
+  }
+
+  async fetchLibraries(): Promise<Library[]> {
+    const libraryDocs = await getDocs(collection(db, "libraries"));
+
+    const visitsDoc = await getDoc(doc(db, "visits", this.saveID));
+    if (!visitsDoc.exists()) {
+      throw new Error(`saveID {${this.saveID}} not found in firestore`);
+    }
+
+    const visits = visitsDoc.data() as Visits;
+
+    return Object.values(libraryDocs.docs).map((libraryDoc) => {
+      const library = libraryDoc.data() as DefaultLibrary;
+      return {
+        ...library,
+        visited: visits[library.libraryId] ?? false,
+      };
+    });
+  }
 }
-export type Api = ReturnType<typeof generateApi>;

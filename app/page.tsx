@@ -3,11 +3,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { Main } from "./components/Main";
 import Head from "./header";
-import { generateApi } from "./services/api";
+import { Api } from "./services/api";
 
 export default function Home() {
-  const [saveID, setSaveID] = useState<string>("8dfe6b3483094464d038");
-  const api = generateApi(saveID); // todo - this is the old url, replace me with blank once saves are setup
+  const [saveID, setSaveID] = useState<string>("test-visited");
+  const api = new Api(saveID); // todo - this is the old url, replace me with blank once saves are setup
 
   return (
     <div className="flex h-screen w-screen flex-col font-[family-name:var(--font-geist-sans)]">
