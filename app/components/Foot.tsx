@@ -36,7 +36,7 @@ export function Foot({ className = "", libraries }: FootProps): JSX.Element {
       >
         <Image
           aria-hidden
-          src="/github-mark.svg"
+          src="/auckland-libraries/github-mark.svg"
           alt="GitHub logo"
           width={16}
           height={16}
@@ -48,11 +48,12 @@ export function Foot({ className = "", libraries }: FootProps): JSX.Element {
       <div
         className="flex cursor-pointer items-center justify-center gap-2 text-right hover:underline hover:underline-offset-4"
         onClick={async () => {
-          if (navigator.canShare()) {
-            await navigator.share({
-              url: window.location.href,
-              text: "Come see my progress in visting every Auckland Library!",
-            });
+          const shareable: ShareData = {
+            url: window.location.href,
+            text: "Come see my progress in visting every Auckland Library!",
+          };
+          if (navigator.canShare(shareable)) {
+            await navigator.share(shareable);
           } else {
             await navigator.clipboard.writeText(window.location.href);
             setShareText("Copied!");
