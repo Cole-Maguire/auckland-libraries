@@ -1,13 +1,17 @@
 "use client";
-import Image from "next/image";
+
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import {} from "next/router";
 import { useEffect, useState } from "react";
+import { Foot } from "./components/Foot";
+import Head from "./components/Head";
 import { Main } from "./components/Main";
-import Head from "./header";
+import { Library } from "./models/Library";
+import defaultLibraries from "./resources/defaultLibraries";
 import { Api } from "./services/api";
 
 export default function Home() {
+  const [libraries, setLibraries] = useState<Library[]>(defaultLibraries);
+
   const [saveID, setSaveID] = useState<string>("");
   const [api, setApi] = useState<Api>(new Api(saveID));
   const searchParams = useSearchParams();
@@ -19,8 +23,16 @@ export default function Home() {
   }, [saveID]);
 
   useEffect(() => {
-    const f = async () => {
-      const querySaveID = searchParams.get("saveID");
+    async function setAsync() {
+      setLibraries(await api.fetchLibraries());
+      console.debug("useEffect saveID");
+    }
+    setAsync();
+  }, [api]);
+
+  useEffect(() => {
+    const parseSaveIDs = async () => {
+      const querySaveID = searchParams?.get("saveID");
       const localSaveID = localStorage.getItem("saveID");
 
       if (!querySaveID && localSaveID) {
@@ -28,42 +40,29 @@ export default function Home() {
         router.push(pathname + "?" + params);
       } else if (querySaveID && localSaveID) {
         setSaveID(querySaveID);
-        // router.refresh(); // todo a more elegant map refresh
       } else if (querySaveID && !localSaveID) {
         setSaveID(querySaveID);
         localStorage.setItem("saveID", querySaveID);
-        router.refresh(); // todo a more elegant map refresh
-      } else if (!querySaveID && !localSaveID) {
+        router.refresh(); // todo: a more elegant map refresh
+      } else if ((!querySaveID && !localSaveID) || querySaveID === "new") {
         const newSaveID = await api.newSaveID();
         const params = new URLSearchParams({ saveID: newSaveID });
         router.push(pathname + "?" + params);
       }
     };
-    f();
+    parseSaveIDs();
   }, [api, pathname, router, saveID, searchParams]);
 
   return (
     <div className="flex h-screen w-screen flex-col font-[family-name:var(--font-geist-sans)]">
-      <Head saveID={saveID} setSaveID={setSaveID} className="p-4" />
-      <Main className="h-4/5" api={api} />
-      <footer className="h-1/10 flex flex-wrap items-center justify-center gap-6 bg-gray-800 text-white shadow-md">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://github.com/Cole-Maguire"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/github-mark.svg"
-            alt="GitHub logo"
-            width={16}
-            height={16}
-            style={{ filter: "invert(1)" }} // hack to invert svg image color without the hassle of importing
-          />
-          Visit me on Github!
-        </a>
-      </footer>
+      <Head className="p-4" />
+      <Main
+        className="h-4/5"
+        api={api}
+        libraries={libraries}
+        setLibraries={setLibraries}
+      />
+      <Foot libraries={libraries} />
     </div>
   );
 }

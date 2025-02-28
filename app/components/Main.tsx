@@ -1,18 +1,24 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { JSX, useEffect, useMemo, useState } from "react";
+import { Dispatch, JSX, SetStateAction, useMemo, useState } from "react";
 import { Library } from "../models/Library";
-import defaultLibraries from "../resources/defaultLibraries";
 import { Api } from "../services/api";
 import { List } from "./List";
 
 type MainProps = {
-  className: string;
+  className?: string;
   api: Api;
+  libraries: Library[];
+  setLibraries: Dispatch<SetStateAction<Library[]>>;
 };
 
-export function Main({ className, api }: MainProps): JSX.Element {
+export function Main({
+  className = "",
+  api,
+  libraries,
+  setLibraries,
+}: MainProps): JSX.Element {
   const Map = useMemo(
     () =>
       dynamic(() => import("@/app/components/Map"), {
@@ -22,18 +28,9 @@ export function Main({ className, api }: MainProps): JSX.Element {
     [],
   );
 
-  const [libraries, setLibraries] = useState<Library[]>(defaultLibraries);
   const [highlightedLibrary, setHighlightedLibrary] = useState<Library | null>(
     null,
   );
-
-  useEffect(() => {
-    async function setAsync() {
-      setLibraries(await api.fetchLibraries());
-      console.debug("useEffect saveID");
-    }
-    setAsync();
-  }, [api]);
 
   return (
     <main
