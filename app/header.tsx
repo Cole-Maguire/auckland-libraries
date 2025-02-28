@@ -8,8 +8,8 @@ type HeadProps = {
 
 export default function Head({ className }: HeadProps): JSX.Element {
   return (
-    <header className={`${className} p-4`}>
-      <h1 className="text-2xl">Auckland Library Tracker</h1>
+    <header className={`${className} bg-gray-800 p-4 text-white shadow-md`}>
+      <h1 className="text-2xl font-bold">Auckland Library Tracker</h1>
     </header>
   );
 }
