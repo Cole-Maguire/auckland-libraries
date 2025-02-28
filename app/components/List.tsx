@@ -29,7 +29,10 @@ export function List({
   });
 
   return (
-    <div className="h-full overflow-y-auto bg-gray-300 bg-white p-4 shadow-md">
+    <div
+      className="h-full overflow-y-auto bg-gray-600 bg-white p-4 shadow-md"
+      style={{ scrollbarWidth: "thin" }}
+    >
       {libraries
         .sort((a, b) => a.name.localeCompare(b.name))
         .map((library) => (
@@ -38,7 +41,7 @@ export function List({
             className={`duration-400 mb-4 flex items-center justify-between rounded-lg p-4 shadow transition-all ${
               highlightedLibrary?.libraryId === library.libraryId
                 ? "bg-red-50"
-                : "bg-gray-100"
+                : "bg-gray-200"
             }`}
             ref={(e) => {
               ref.current[library.libraryId] = e;
