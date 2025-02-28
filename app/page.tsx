@@ -25,7 +25,6 @@ export default function Home() {
   useEffect(() => {
     async function setAsync() {
       setLibraries(await api.fetchLibraries());
-      console.debug("useEffect saveID");
     }
     setAsync();
   }, [api]);

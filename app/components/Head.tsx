@@ -13,6 +13,9 @@ export default function Head({ className = "" }: HeadProps): JSX.Element {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=share&display=optional"
       />
+      <h2 className="text-l italic">
+        Visit every Auckland Library! Track your progress!
+      </h2>
     </header>
   );
 }
