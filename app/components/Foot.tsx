@@ -15,7 +15,7 @@ export function Foot({ className = "", libraries }: FootProps): JSX.Element {
   const [shareText, setShareText] = useState(defaultShareText);
   return (
     <footer
-      className={`${className} h-1/10 grid grid-cols-3 gap-6 bg-gray-800 px-4 text-white shadow-md`}
+      className={`${className} h-1/10 flex justify-evenly gap-6 bg-gray-800 px-4 text-white shadow-md md:grid md:grid-cols-3`}
     >
       <div>
         {libraries.filter((library) => library.visited).length}/
