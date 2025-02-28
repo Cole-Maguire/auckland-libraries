@@ -53,7 +53,7 @@ export default function Page() {
   }, [api, pathname, router, saveID, searchParams]);
 
   return (
-    <div className="flex h-screen w-screen flex-col font-[family-name:var(--font-geist-sans)]">
+    <div className="flex h-dvh w-dvw flex-col font-[family-name:var(--font-geist-sans)]">
       <Head className="p-4" />
       <Main
         className="h-4/5"
