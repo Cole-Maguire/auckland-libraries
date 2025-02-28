@@ -13,7 +13,6 @@ type FootProps = {
 
 export function Foot({ className = "", libraries }: FootProps): JSX.Element {
   const [shareText, setShareText] = useState(defaultShareText);
-
   return (
     <footer
       className={`${className} h-1/10 grid grid-cols-3 gap-6 bg-gray-800 px-4 text-white shadow-md`}
@@ -42,7 +41,7 @@ export function Foot({ className = "", libraries }: FootProps): JSX.Element {
           height={16}
           style={{ filter: "invert(1)" }} // hack to invert svg image color without the hassle of importing
         />
-        Visit me on Github!
+        <span className="hidden md:block">Visit me on Github!</span>
       </a>
 
       <div
@@ -70,7 +69,7 @@ export function Foot({ className = "", libraries }: FootProps): JSX.Element {
         >
           share
         </span>
-        {shareText}
+        <span className="hidden md:block">{shareText}</span>
       </div>
     </footer>
   );
